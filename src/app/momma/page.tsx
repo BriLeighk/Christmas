@@ -1,5 +1,6 @@
 import Card from '@/components/Card';
 import Image from 'next/image';
+import Navigation from '@/components/Navigation';
 
 export default function MommaCard() {
   const messages = [
@@ -7,21 +8,20 @@ export default function MommaCard() {
     "Dear Momma,\nMerry Christmas! I love you so much and am so grateful for everything you do for us. You are the best momma anyone could ask for.\n\nYour gift hasn't arrived yet, but we wanted to get you something special that you could keep with you and cherish always.",
     
     // Second page - with image
-    <div key="page2" className="flex flex-col items-center font-cormorant">
-      <p className="mb-6 text-xl leading-relaxed font-light">
+    <div key="page2" className="flex flex-col items-center font-cormorant w-full">
+      <p className="text-[clamp(14px,3vw,20px)] mb-[5%] leading-relaxed font-light">
         We bought you this necklace so you can keep a part of Blaze with you when we go to Portugal, and have it with you wherever you go.
-      </p>
+      </p> <br />
       
-      {/* Framed Image */}
-      <div className="relative max-w-[250px] mx-auto my-4">
+      <div className="relative w-[clamp(150px,30%,250px)] mx-auto">
         <div className="absolute inset-[-12px] border-[3px] border-black/20 rounded-lg" />
         <div className="absolute inset-[-8px] bg-white/60 rounded-lg" />
         <Image
           src="/necklace.png"
           alt="Necklace for Momma"
-          width={250}
-          height={250}
-          className="relative rounded-lg shadow-lg"
+          width={300}
+          height={300}
+          className="relative rounded-lg shadow-lg w-full h-auto"
         />
       </div>
     </div>,
@@ -31,14 +31,17 @@ export default function MommaCard() {
   ];
 
   return (
-    <Card
-      recipient="Momma"
-      coverImage="/momma-cover.png"
-      messages={messages}
-      colors={{
-        primary: '#f5f5f0',   // Cream
-        secondary: '#eaeae0'  // Slightly darker cream
-      }}
-    />
+    <>
+      <Navigation />
+      <Card
+        recipient="Momma"
+        coverImage="/momma-cover.png"
+        messages={messages}
+        colors={{
+          primary: '#f5f5f0',
+          secondary: '#eaeae0'
+        }}
+      />
+    </>
   );
 } 
