@@ -35,7 +35,10 @@ export default function MommaCard() {
       recipient="Momma"
       coverImage="/momma-cover.png"
       messages={messages}
-      colors={{}}
+      colors={{
+        primary: '#f5f5f0',   // Cream
+        secondary: '#eaeae0'  // Slightly darker cream
+      }}
     />
   );
 } 

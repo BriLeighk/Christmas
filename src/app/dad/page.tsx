@@ -35,7 +35,10 @@ export default function DadCard() {
       recipient="Dad"
       coverImage="/dad-cover.png"
       messages={messages}
-      colors={{}}
+      colors={{
+        primary: '#e6f3ff',   // Light blue
+        secondary: '#d9edff'  // Slightly darker blue
+      }}
     />
   );
 } 

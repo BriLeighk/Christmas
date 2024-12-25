@@ -44,7 +44,10 @@ export default function SisterCard() {
       recipient="Courtney"
       coverImage="/sister-cover.png"
       messages={messages}
-      colors={{primary: '#000000', secondary: '#000000'}}
+      colors={{
+        primary: '#ffe6eb',   // Baby pink
+        secondary: '#ffd6e0'  // Slightly darker pink
+      }}
     />
   );
 } 
