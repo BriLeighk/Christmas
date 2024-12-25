@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Gallery from '@/components/Gallery';
 
 export default function Home() {
   return (
@@ -30,6 +30,8 @@ export default function Home() {
           <p className="text-2xl font-cormorant text-gray-800">For Coco</p>
         </a>
       </div>
+
+      <Gallery />
     </main>
   );
 }
